@@ -21,6 +21,14 @@ local function draw(monitor, list)
         
         i = i + 1
     end
+    
+    monitor.setBackgroundColor(colors.lightGray)
+    monitor.setTextColor(colors.gray)
+    for div=1,m_height do
+        monitor.setCursorPos(m_width/2, div)
+    end
+    monitor.setBackgroundColor(colors.black)
+    monitor.setTextColor(colors.white)
 end
 
 local compiler = require("hex_compiler")
