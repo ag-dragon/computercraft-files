@@ -1,7 +1,7 @@
 local includes = {
         -- includes
-        "include/shorthand.hex",
-        "include/raycast.hex",
+        "shorthand.hex",
+        "raycast.hex",
         }
 
 return includes

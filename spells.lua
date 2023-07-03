@@ -1,7 +1,7 @@
 local spells = {
         -- spells
-        "spells/railgun.hex",
-        "spells/smartbomb.hex",
+        "railgun.hex",
+        "smartbomb.hex",
         }
 
 return spells
