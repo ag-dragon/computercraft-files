@@ -1,7 +1,5 @@
 -- 0.1.0
 
-local util = require("Util")
-
 shell.run("delete", "masterlist.hex")
 os.sleep(.4)
 shell.run("delete", "hex_compiler.lua")
