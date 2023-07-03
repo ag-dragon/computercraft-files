@@ -1,3 +1,10 @@
+local function draw_square(monitor, x, y, width, height, text)
+    for i=y,y+height do
+        monitor.setCursorPos(x, i)
+        monitor.write(string.rep(" ", width)
+    end
+end
+
 -- draw
 -- draws display to monitor
 -- @arg monitor the monitor to draw on
@@ -29,6 +36,10 @@ local function draw(monitor, list)
     end
     monitor.setBackgroundColor(colors.black)
     monitor.setTextColor(colors.white)
+    
+    monitor.setBackgroundColor(colors.red)
+    draw_square(m_width-10, m_height-10, 5, 5, "")
+    monitor.setBackgroundColor(colors.black)
 end
 
 local compiler = require("hex_compiler")
