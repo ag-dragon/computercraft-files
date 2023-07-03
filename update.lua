@@ -38,13 +38,3 @@ for i,filename in ipairs(spells) do
     shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/spells/" .. filename, "spells/" .. filename)
     os.sleep(.4)
 end
-
--- shell.run("delete", "spells")
--- os.sleep(.4)
--- shell.run("delete", "include")
--- os.sleep(.4)
-
--- shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/spells", "spells")
--- os.sleep(.4)
--- shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/include", "include")
--- os.sleep(.4)

@@ -1,4 +1,4 @@
--- change proof hi
+local compiler = {}
 
 local included_files = {}
 -- include
@@ -134,7 +134,7 @@ end
 -- compiles hex to focus while drawing visualization
 -- on monitor
 -- @arg filename filename of hex file to compile
-function compile(filename)
+function compiler.compile(filename)
     -- patern dict setup
     local patterns = require("patterns")
     local ipatterns = {}
@@ -168,5 +168,3 @@ function compile(filename)
         channel_listen()
     end
 end
-
-compile(arg[1])
