@@ -1,7 +1,5 @@
 -- 0.1.0
 
-shell.run("delete", "masterlist.hex")
-os.sleep(.4)
 shell.run("delete", "display.lua")
 os.sleep(.4)
 shell.run("delete", "hex_compiler.lua")
@@ -13,8 +11,6 @@ os.sleep(.4)
 shell.run("delete", "spells.lua")
 os.sleep(.4)
 
-shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/masterlist.hex", "masterlist.hex")
-os.sleep(.4)
 shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/display.lua", "display.lua")
 os.sleep(.4)
 shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/hex_compiler.lua", "hex_compiler.lua")
