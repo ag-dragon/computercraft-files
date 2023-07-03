@@ -28,9 +28,9 @@ for i,filename in ipairs(includes) do
 end
 
 for i,filename in ipairs(spells) do
-    shell.run("delete", "include/" .. filename)
+    shell.run("delete", "spells/" .. filename)
     os.sleep(.4)
-    shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/include/" .. filename, filename)
+    shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/spells/" .. filename, filename)
     os.sleep(.4)
 end
 
