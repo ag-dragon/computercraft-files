@@ -1,0 +1,25 @@
+#include hex/shorthand.hex
+
+#define caster_raycast_block
+    caster
+    entity_pos
+    caster
+    entity_look
+    ray_block
+#enddefine
+
+#define caster_raycast_side
+    caster
+    entity_pos
+    caster
+    entity_look
+    ray_side
+#enddefine
+
+#define caster_raycast_entity
+    caster
+    entity_pos
+    caster
+    entity_look
+    ray_entity
+#enddefine

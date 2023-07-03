@@ -1,0 +1,33 @@
+#include hex/shorthand.hex
+#include hex/raycast.hex
+
+-- test
+#define zoom
+    duplicate
+    caster
+    entity_look
+    10
+    mult
+    Impulse
+#enddefine
+
+-- get arrows at feet
+caster
+entity_pos_feet
+1
+Zone Distillation: Non-Player
+list_dump
+
+duplicate
+duplicate
+entity_pos
+caster
+entity_pos
+swap
+sub
+caster
+entity_look
+add
+Summon Greater Sentinel
+
+zoom

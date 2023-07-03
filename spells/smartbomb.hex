@@ -1,0 +1,36 @@
+#include hex/shorthand.hex
+#include hex/raycast.hex
+
+#define boom
+    duplicate
+    entity_pos
+    -y
+    10
+    divide
+    10
+    divide
+    add
+    10
+    Explosion
+#enddefine
+
+caster_raycast_entity
+
+duplicate
+entity_pos
+Create Water
+
+boom
+boom
+boom
+boom
+boom
+boom
+boom
+boom
+boom
+boom
+
+duplicate
+entity_pos
+Destroy Liquid
