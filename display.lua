@@ -1,7 +1,7 @@
 local function draw_square(monitor, x, y, width, height, text)
     for i=y,y+height do
         monitor.setCursorPos(x, i)
-        monitor.write(string.rep(" ", width)
+        monitor.write(string.rep(" ", width))
     end
 end
 
@@ -32,13 +32,14 @@ local function draw(monitor, list)
     monitor.setBackgroundColor(colors.lightGray)
     monitor.setTextColor(colors.gray)
     for div=1,m_height do
-        monitor.setCursorPos(m_width/2, div)
+        monitor.setCursorPos((m_width/2)+1, div)
+        monitor.write("~")
     end
     monitor.setBackgroundColor(colors.black)
     monitor.setTextColor(colors.white)
     
     monitor.setBackgroundColor(colors.red)
-    draw_square(m_width-10, m_height-10, 5, 5, "")
+    draw_square(monitor, m_width-10, m_height-10, 5, 5, "")
     monitor.setBackgroundColor(colors.black)
 end
 
