@@ -18,7 +18,8 @@ os.sleep(.4)
 shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/patterns.lua", "filelist.lua")
 os.sleep(.4)
 
-local includes, spells = require("filelist")
+local includes = require("includes")
+local spells = require("spells")
 
 for i,filename in ipairs(includes) do
     shell.run("delete", "include/" .. filename)
