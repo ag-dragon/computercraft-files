@@ -1,4 +1,4 @@
--- 0.2.6
+-- 0.2.7
 local updater = {}
 
 local function download_file(filename, monitor)
@@ -32,6 +32,8 @@ function updater.update(monitor)
     download_file("includes.lua", monitor)
     download_file("spells.lua", monitor)
 
+    package.loaded.includes = nil
+    package.loaded.spells = nil
     local includes = require("includes")
     local spells = require("spells")
 
