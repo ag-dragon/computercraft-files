@@ -1,4 +1,4 @@
--- 0.2.1
+-- 0.2.2
 local updater = {}
 
 local function download_file(filename, monitor)
@@ -32,11 +32,11 @@ function updater.update(monitor)
     local spells = require("spells")
 
     for i,filename in ipairs(includes) do
-        download_file("include/" .. filename)
+        download_file("include/" .. filename, monitor)
     end
 
     for i,filename in ipairs(spells) do
-        download_file("spells/" .. filename)
+        download_file("spells/" .. filename, monitor)
     end
     monitor.write("Finished updating!")
 end
