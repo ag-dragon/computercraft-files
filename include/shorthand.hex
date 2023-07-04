@@ -1,4 +1,4 @@
--- 0.1.1
+-- 0.1.2
 -- desc: Shorthand notation for patterns
 -- Basic Patterns ------------------------------
 #define caster
@@ -169,7 +169,7 @@
 #enddefine
 
 #define conditional
-    Augur's Exaltation
+    Augur's Exaltion
 #enddefine
 
 #define equals
