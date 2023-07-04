@@ -1,4 +1,4 @@
--- 0.2.2
+-- 0.2.3
 local updater = {}
 
 local function download_file(filename, monitor)
@@ -38,7 +38,9 @@ function updater.update(monitor)
     for i,filename in ipairs(spells) do
         download_file("spells/" .. filename, monitor)
     end
-    monitor.write("Finished updating!")
+    monitor.write("Finished updating! Click to continue...")
+    
+    os.pullEvent("monitor_touch")
 end
 
 return updater
