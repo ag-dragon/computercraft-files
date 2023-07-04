@@ -1,4 +1,5 @@
 -- 0.1.1
+-- desc: 10 size 10 explosions at entity. No block destruction if not in nether. Though still destroys items frames/etc.
 -- change test
 #include include/shorthand.hex
 #include include/raycast.hex
