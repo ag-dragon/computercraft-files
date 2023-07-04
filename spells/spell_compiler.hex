@@ -1,10 +1,12 @@
--- 0.1.0
+-- 0.1.1
 -- desc: computercraft spell compiler hex
 #include include/shorthand.hex
 
 -- get output entity
 caster
 entity_pos
+-z
+add
 -z
 add
 -x
