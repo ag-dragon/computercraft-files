@@ -1,0 +1,7 @@
+-- 0.1.0
+-- desc: testing the issue with patterns near the bottom of the list
+#include include/shorthand.hex
+#include include/raycast.hex
+
+caster_raycast_block
+Smelt

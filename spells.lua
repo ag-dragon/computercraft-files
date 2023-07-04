@@ -1,4 +1,4 @@
--- 0.1.1
+-- 0.1.2
 local spells = {
         -- spells
         "masterlist.hex",
@@ -9,6 +9,7 @@ local spells = {
         "lava.hex",
         "test_error.hex",
         "new_file_test.hex",
+        "pattern_testing.hex",
         }
 
 return spells
