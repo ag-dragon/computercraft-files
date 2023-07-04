@@ -1,4 +1,4 @@
--- 0.2.0
+-- 0.2.1
 local updater = {}
 
 local function download_file(filename, monitor)
@@ -10,7 +10,7 @@ local function download_file(filename, monitor)
     if old_version ~= new_version then
         local _,y = monitor.getCursorPos()
         monitor.setCursorPos(1, y+1)
-        monitor.write(string.format("%s: %s -> %s", filename, old_version, new_version)
+        monitor.write(string.format("%s: %s -> %s", filename, old_version, new_version))
     end
 end
 
