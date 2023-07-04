@@ -1,4 +1,4 @@
--- 0.3.0
+-- 0.3.1
 local compiler = {}
 
 local included_files = {}
@@ -42,28 +42,35 @@ local function precompile(filename)
         end
     end
     
+    local no_comments = {}
+    for _,line in ipairs(no_whitespace) do
+        if string.sub(line, 1, 2) ~= "--" then
+            table.insert(no_comments, line)
+        end
+    end
+    
     -- macro defines
     local macros = {}
     local output = {}
     local skip = 0
-    for i=1,#no_whitespace do
+    for i=1,#no_comments do
         if i > skip then
-            if string.sub(no_whitespace[i], 1, 8) == "#define " then
+            if string.sub(no_comments[i], 1, 8) == "#define " then
                 local macro = {}
-                local key = string.sub(no_whitespace[i], 9, -1)
+                local key = string.sub(no_comments[i], 9, -1)
                 
-                for j=i+1,#no_whitespace do
-                    if string.sub(no_whitespace[j], 1, 10) == "#enddefine" then
+                for j=i+1,#no_comments do
+                    if string.sub(no_comments[j], 1, 10) == "#enddefine" then
                         skip = j
                         break
                     else
-                        table.insert(macro, no_whitespace[j])
+                        table.insert(macro, no_comments[j])
                     end
                 end
                 
                 macros[key] = macro
             else
-                table.insert(output, no_whitespace[i])
+                table.insert(output, no_comments[i])
             end
         end
     end
