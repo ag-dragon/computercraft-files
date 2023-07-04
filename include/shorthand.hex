@@ -177,6 +177,10 @@
     Integration Distillation
 #enddefine
 
+#define list_create
+    Vacant Reflection
+#enddefine
+
 #define list_dump
     Flock's Disintegration
 #enddefine
