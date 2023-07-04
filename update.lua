@@ -2,11 +2,10 @@
 local updater = {}
 
 local function download_file(filename, monitor)
+    local old_version = "None"
     if fs.exists(filename) then
-        local old_version = string.sub(fs.open(filename, "r").readLine(), 4)
+        old_version = string.sub(fs.open(filename, "r").readLine(), 4)
         shell.run("delete", filename)
-    else
-        local old_version = "None"
     end
     
     shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/" .. filename, filename)
