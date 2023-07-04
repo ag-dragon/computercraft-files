@@ -1,4 +1,4 @@
--- 0.2.5
+-- 0.2.7
 local function draw_square(monitor, x, y, width, height, text)
     for i=y,y+height-1 do
         if i == y+math.floor(height/2) then
@@ -74,7 +74,7 @@ local function draw(monitor, list, current)
     local desc = file.readLine()
     if string.sub(desc, 1, 9) == "-- desc: " then
         monitor.setCursorPos((m_width/2)+2, 3)
-        monitor.write(string.sub(desc, 10)
+        monitor.write(string.sub(desc, 10))
     end
 end
 
