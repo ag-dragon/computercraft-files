@@ -13,6 +13,7 @@ local function draw(monitor, list)
     monitor.setBackgroundColor(colors.black)
     monitor.clear()
     
+    -- File list
     local start = 0
     local i = 1
     if #list > m_height then
@@ -29,15 +30,21 @@ local function draw(monitor, list)
         i = i + 1
     end
     
+    -- Dividers
     monitor.setBackgroundColor(colors.lightGray)
     monitor.setTextColor(colors.gray)
     for div=1,m_height do
         monitor.setCursorPos((m_width/2)+1, div)
         monitor.write("~")
     end
+    
+    monitor.setCursorPos((m_width/2)+2, m_height/2)
+    monitor.write(string.rep("~", (m_width/2)))
+    
     monitor.setBackgroundColor(colors.black)
     monitor.setTextColor(colors.white)
     
+    -- Buttons
     monitor.setBackgroundColor(colors.red)
     draw_square(monitor, m_width-10, m_height-10, 5, 5, "")
     monitor.setBackgroundColor(colors.black)
