@@ -63,6 +63,19 @@ local function draw(monitor, list, current)
     draw_square(monitor, m_width-7, m_height-11, 7, 5, "->")
     draw_square(monitor, m_width-7, m_height-5, 7, 5, "reload")
     monitor.setBackgroundColor(colors.black)
+    
+    -- File Information
+    local file = fs.open(list[current], "r")
+    
+    monitor.setCursorPos((m_width/2)+2, 1)
+    monitor.write(list[current])
+    monitor.setCursorPos((m_width/2)+2, 2)
+    monitor.write(string.sub(file.readLine(), 4))
+    local desc = file.readLine()
+    if string.sub(desc, 1, 9) == "-- desc: " then
+        monitor.setCursorPos((m_width/2)+2, 3)
+        monitor.write(string.sub(desc, 10)
+    end
 end
 
 local compiler = require("hex_compiler")
