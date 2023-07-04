@@ -1,12 +1,6 @@
--- 0.1.1
+-- 0.1.2
 -- desc: testing the issue with patterns near the bottom of the list
 #include include/shorthand.hex
 #include include/raycast.hex
 
-list_create
-caster
-entity_pos
-caster
-entity_look
-10
-Summon Projectile Wisp
+Link
