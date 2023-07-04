@@ -1,5 +1,6 @@
--- 0.1.0
--- desc: Every pattern
+-- 0.1.1
+-- desc: list of every pattern
+-- Basic Patterns
 Mind's Reflection
 Compass' Purification
 Compass' Purification II
@@ -10,6 +11,8 @@ Scout's Distillation
 Reveal
 Stadiometer's Purification
 Pace Purification
+
+-- Hexal Basic Patterns
 Timekeeper's Reflection
 Thanatos' Reflection
 Diver's Purification
@@ -17,6 +20,8 @@ Nurse's Purification
 Squire's Purification
 Boxer's Purification
 Lamplighter's Purification
+
+-- Number Literals
 Numerical Reflection: 1
 Numerical Reflection: 2
 Numerical Reflection: 3
@@ -29,6 +34,8 @@ Numerical Reflection: 9
 Numerical Reflection: 10
 Numerical Reflection: -1
 Numerical Reflection: 0
+
+-- Mathematics
 Additive Distillation
 Subtractive Distillation
 Multiplicative Distillation
@@ -42,6 +49,8 @@ Vector Disintegration
 Modulus Distillation
 Axial Purification
 Entropy Reflection
+
+-- Constants
 True Reflection
 False Reflection
 Nullary Reflection
@@ -55,9 +64,13 @@ Vector Reflection -Z
 Circle's Reflection
 Arc's Reflection
 Euler's Reflection
+
+-- Hexal Maths
 Factorial Purification
 Running Sum Purification
 Running Product Purification
+
+-- Stack Manipulation
 Novice's Gambit
 Jester's Gambit
 Rotation Gambit
@@ -71,6 +84,8 @@ Flock's Reflection
 Fisherman's Gambit
 Fisherman's Gambit II
 Swindler's Gambit
+
+-- Logical Operators
 Negation Purification
 Augur's Purification
 Disjunction Distillation
@@ -83,6 +98,8 @@ Maximus Distillation
 Minimus Distillation
 Maximus Distillation II
 Minimus Distillation II
+
+-- Types
 Classifier's Purification
 Physician's Purification
 Sorter's Purification
@@ -90,6 +107,8 @@ Sorter's Reflection
 Entity Distillation: Type
 Zone Exaltation: Type
 Zone Exaltation: Non-Type
+
+-- Entities
 Entity Purification
 Entity Purification: Animal
 Entity Purification: Monster
@@ -107,6 +126,8 @@ Zone Distillation: Non-Player
 Zone Distillation: Living
 Zone Distillation: Non-Living
 Zone Distillation: Any
+
+-- List Manipulation
 Selection Distillation
 Selection Exaltation
 Integration Distillation
@@ -122,9 +143,13 @@ Flock's Gambit
 Flock's Disintegration
 Speaker's Distillation
 Speaker's Decomposition
+
+-- Patterns as Iotas
 Consideration
 Introspection
 Retrospection
+
+-- Reading and Writing
 Scribe's Reflection
 Scribe's Gambit
 Chronicler's Purification
@@ -135,6 +160,8 @@ Assessor's Reflection
 Assessor's Purification
 Huginn's Gambit
 Muninn's Reflection
+
+-- Advanced Mathematics
 Sine Purification
 Cosine Purification
 Tangent Purification
@@ -142,29 +169,43 @@ Inverse Sine Purification
 Inverse Cosine Purification
 Inverse Tangent Purification
 Logarithmic Distillation
+
+-- Sets
 Unifying Distillation
 Intersection Distillation
 Exclusionary Distillation
 Inversion Purification
 Uniqueness Purification
+
+-- Meta-Evaluation
 Hermes' Gambit
 Thoth's Gambit
 Charon's Gambit
+
+-- Spell Circle patterns
 Waystone Reflection
 Lodestone Reflection
 Lesser Fold Reflection
 Greater Fold Reflection
+
+-- Akashic patterns
 Akasha's Distillation
 Akasha's Gambit
+
+-- Everbook
 Mnemosyne's Gambit
 Elysium's Gambit
 Lethe's Gambit
 Brigh's Gambit
+
+-- Basic Spells
 Explosion
 Fireball
 Impulse
 Blink
 Make Note
+
+-- Blockworks
 Place Block
 Break Block
 Create Water
@@ -175,26 +216,38 @@ Overgrow
 Edify Sapling
 Ignite Block
 Extinguish Area
+
+-- Nadirs
 White Sun's Nadir
 Blue Sun's Nadir
 Black Sun's Nadir
 Red Sun's Nadir
 Green Sun's Nadir
+
+-- Crafting Casting Items
 Craft Cypher
 Craft Trinket
 Craft Artifact
 Recharge Item
 Erase Item
+
+-- Sentinels
 Summon Sentinel
 Banish Sentinel
 Locate Sentinel
 Wayfind Sentinel
+
+-- Internalize Pigment
 Internalize Pigment
+
+-- Hexal Spells
 Smelt
 Freeze
 Falling Block
 Place Block II
 Particles
+
+-- Wisps
 Summon Projectile Wisp
 Summon Cyclic Wisp
 Identity Reflection
@@ -211,6 +264,8 @@ Zone Distillation: Non-Wisp
 Delay Wisp
 Listen
 Wander
+
+-- Links
 Link
 Link Others
 Unlink
@@ -224,45 +279,69 @@ Postmaster's Reflection
 Unclogging Gambit
 Open Transmit
 Close Transmit
-Bind Storage
-Bind Storage - Temp
-Stocktake Reflection
-Stocktake Purification
-Capacity Reflection
-Mediafy Item
-Return Item
-Weighing Purification
-Stacking Distillation
-Stacking Distillation II
-Splitting Gambit
-Depot Purification
-Depot Gambit
-Craft
-Seniority Purification
-Offering Purification
-Trade
-Use Item On
-Create Lava
-White Sun's Zenith
-Blue Sun's Zenith
-Black Sun's Zenith
-Red Sun's Zenith
-Green Sun's Zenith
-Summon Lightning
-Summon Rain
-Dispel Rain
-Flight
-Greater Teleport
-Summon Greater Sentinel
-Craft Phial
-Flay Mind
-Accelerate
-Consume Wisp
-Bind Wisp
-Familiar's Reflection
-Gate's Reflection
-Gate's Opening
-Gate's Dismissal
-Marked Purification
-Marked Distillation
-Gate's Closing
+
+-- Motes
+-- Bind Storage
+-- Bind Storage - Temp
+-- Stocktake Reflection
+-- Stocktake Purification
+-- Capacity Reflection
+-- Mediafy Item
+-- Return Item
+-- Weighing Purification
+-- Stacking Distillation
+-- Stacking Distillation II
+-- Splitting Gambit
+-- Depot Purification
+-- Depot Gambit
+-- Craft
+-- Seniority Purification
+-- Offering Purification
+-- Trade
+-- Use Item On
+-- 
+-- -- Create Lava
+-- Create Lava
+-- 
+-- -- Zeniths
+-- White Sun's Zenith
+-- Blue Sun's Zenith
+-- Black Sun's Zenith
+-- Red Sun's Zenith
+-- Green Sun's Zenith
+-- 
+-- -- Weather Manipulation
+-- Summon Lightning
+-- Summon Rain
+-- Dispel Rain
+-- 
+-- -- Flight
+-- Flight
+-- 
+-- -- Greater Teleportation
+-- Greater Teleport
+-- 
+-- -- Summon Greater Sentinel
+-- Summon Greater Sentinel
+-- 
+-- -- Craft Phial
+-- Craft Phial
+-- 
+-- -- Flay Mind
+-- Flay Mind
+-- 
+-- -- Accelerate
+-- Accelerate
+-- 
+-- -- Great Wisp Spells
+-- Consume Wisp
+-- Bind Wisp
+-- Familiar's Reflection
+-- 
+-- -- Gates
+-- Gate's Reflection
+-- Gate's Opening
+-- Gate's Dismissal
+-- Marked Purification
+-- Marked Distillation
+-- Gate's Closing
