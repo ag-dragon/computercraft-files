@@ -161,9 +161,9 @@ function compiler.compile(filename)
         
         modem.transmit(1695, 1696, pindex)
         channel_listen()
-        rs.setOutput("back", true)
+        rs.setOutput("left", true)
         sleep(0.1)
-        rs.setOutput("back", false)
+        rs.setOutput("left", false)
         modem.transmit(1695, 1696, 0)
         channel_listen()
     end
