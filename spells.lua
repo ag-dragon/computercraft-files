@@ -6,6 +6,7 @@ local spells = {
         "spell_compiler.hex",
         "tpdoor.hex",
         "lava.hex",
+        "test_error.hex",
         }
 
 return spells
