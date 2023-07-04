@@ -1,4 +1,4 @@
--- 0.2.5
+-- 0.2.6
 local updater = {}
 
 local function download_file(filename, monitor)
@@ -42,6 +42,11 @@ function updater.update(monitor)
     for i,filename in ipairs(spells) do
         download_file("spells/" .. filename, monitor)
     end
+    
+    if fs.exists("startup") then
+        shell.run("delete", "startup")
+    end
+    shell.run("copy", "display.lua", "startup")
     
     local _,y = monitor.getCursorPos()
     monitor.setCursorPos(1, y+1)
