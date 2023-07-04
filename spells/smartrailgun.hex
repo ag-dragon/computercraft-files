@@ -1,4 +1,4 @@
--- 0.1.0
+-- 0.1.1
 -- desc: Creates wisp that then makes any arrows you shoot insta kill whatever you are looking at
 #include include/shorthand.hex
 #include include/raycast.hex
