@@ -5,9 +5,9 @@ caster
 entity_pos
 -Z
 add
--X
+-x
 add
--X
+-x
 add
 get_entity
 list_create
@@ -15,9 +15,9 @@ list_create
 -- get masterlist
 caster
 entity_pos
--Z
+-z
 add
--Z
+-z
 add
 get_entity
 read_entity
