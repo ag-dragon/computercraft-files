@@ -1,9 +1,14 @@
--- 0.2.3
+-- 0.2.5
 local updater = {}
 
 local function download_file(filename, monitor)
-    local old_version = string.sub(fs.open(filename, "r").readLine(), 4)
-    shell.run("delete", filename)
+    if fs.exists(filename) then
+        local old_version = string.sub(fs.open(filename, "r").readLine(), 4)
+        shell.run("delete", filename)
+    else
+        local old_version = "None"
+    end
+    
     shell.run("wget", "https://raw.githubusercontent.com/ag-dragon/computercraft-files/master/" .. filename, filename)
     local new_version = string.sub(fs.open(filename, "r").readLine(), 4)
     
