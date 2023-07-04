@@ -1,0 +1,21 @@
+#include include/shorthand.hex
+
+Gate's Reflection
+
+duplicate
+caster
+entity_pos
+-z
+add
+-z
+add
+get_entity
+Gate's Opening
+
+caster
+entity_pos
++z
+add
++z
+add
+Gate's Closing

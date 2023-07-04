@@ -4,6 +4,7 @@ local spells = {
         "railgun.hex",
         "smartbomb.hex",
         "spell_compiler.hex",
+        "tpdoor.hex",
         }
 
 return spells
