@@ -10,7 +10,8 @@ add
 -x
 add
 get_entity
-list_create
+duplicate
+read_entity
 
 -- get masterlist
 caster
