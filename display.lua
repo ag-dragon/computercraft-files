@@ -86,6 +86,10 @@ while true do
             compiler.compile("spells/" .. spells[selected])
         elseif y >= (m_height-5) and y < (m_height) then
             updater.update()
+            package.loaded.spells = nil
+            package.loaded.hex_compiler = nil
+            spells = require("spells")
+            compiler = require("hex_compiler")
         end
     end
     draw(monitor, spells, selected)
