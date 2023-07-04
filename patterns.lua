@@ -321,7 +321,7 @@ local patterns = {
         "Greater Teleport",
         
         -- Summon Greater Sentinel
-        "Summon Greater Sentinel", -- 1
+        "Summon Greater Sentinel",
         
         -- Craft Phial
         "Craft Phial",

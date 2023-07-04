@@ -5,6 +5,7 @@ local spells = {
         "smartbomb.hex",
         "spell_compiler.hex",
         "tpdoor.hex",
+        "lava.hex",
         }
 
 return spells
