@@ -154,8 +154,13 @@ function compiler.compile(filename)
     
     -- draw and send output to turtle
     local draw_output = {}
+    local error_handler = require("error_handler")
     for _,line in ipairs(output) do
         local pindex = ipatterns[line]
+        if pindex == nil then
+            error_handler.message(monitor, string.format("Unreadable pattern: %s", line))
+            break
+        end
         table.insert(draw_output, line)
         draw(monitor, draw_output)
         
