@@ -1,4 +1,4 @@
--- 0.1.1
+-- 0.1.2
 -- desc: list of every pattern
 -- Basic Patterns
 Mind's Reflection
@@ -281,67 +281,67 @@ Open Transmit
 Close Transmit
 
 -- Motes
--- Bind Storage
--- Bind Storage - Temp
--- Stocktake Reflection
--- Stocktake Purification
--- Capacity Reflection
--- Mediafy Item
--- Return Item
--- Weighing Purification
--- Stacking Distillation
--- Stacking Distillation II
--- Splitting Gambit
--- Depot Purification
--- Depot Gambit
--- Craft
--- Seniority Purification
--- Offering Purification
--- Trade
--- Use Item On
--- 
--- -- Create Lava
+Bind Storage
+Bind Storage - Temp
+Stocktake Reflection
+Stocktake Purification
+Capacity Reflection
+Mediafy Item
+Return Item
+Weighing Purification
+Stacking Distillation
+Stacking Distillation II
+Splitting Gambit
+Depot Purification
+Depot Gambit
+Craft
+Seniority Purification
+Offering Purification
+Trade
+Use Item On
+
 -- Create Lava
--- 
--- -- Zeniths
--- White Sun's Zenith
--- Blue Sun's Zenith
--- Black Sun's Zenith
--- Red Sun's Zenith
--- Green Sun's Zenith
--- 
--- -- Weather Manipulation
--- Summon Lightning
--- Summon Rain
--- Dispel Rain
--- 
--- -- Flight
+Create Lava
+
+-- Zeniths
+White Sun's Zenith
+Blue Sun's Zenith
+Black Sun's Zenith
+Red Sun's Zenith
+Green Sun's Zenith
+
+-- Weather Manipulation
+Summon Lightning
+Summon Rain
+Dispel Rain
+
 -- Flight
--- 
--- -- Greater Teleportation
--- Greater Teleport
--- 
--- -- Summon Greater Sentinel
+Flight
+
+-- Greater Teleportation
+Greater Teleport
+
 -- Summon Greater Sentinel
--- 
--- -- Craft Phial
+Summon Greater Sentinel
+
 -- Craft Phial
--- 
--- -- Flay Mind
+Craft Phial
+
 -- Flay Mind
--- 
--- -- Accelerate
+Flay Mind
+
 -- Accelerate
--- 
--- -- Great Wisp Spells
--- Consume Wisp
--- Bind Wisp
--- Familiar's Reflection
--- 
--- -- Gates
--- Gate's Reflection
--- Gate's Opening
--- Gate's Dismissal
--- Marked Purification
--- Marked Distillation
--- Gate's Closing
+Accelerate
+
+-- Great Wisp Spells
+Consume Wisp
+Bind Wisp
+Familiar's Reflection
+
+-- Gates
+Gate's Reflection
+Gate's Opening
+Gate's Dismissal
+Marked Purification
+Marked Distillation
+Gate's Closing
