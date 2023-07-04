@@ -8,6 +8,7 @@ local spells = {
         "tpdoor.hex",
         "lava.hex",
         "test_error.hex",
+        "new_file_test.hex",
         }
 
 return spells
