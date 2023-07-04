@@ -1,3 +1,4 @@
+-- Basic Patterns ------------------------------
 #define caster
     Mind's Reflection
 #enddefine
@@ -30,38 +31,8 @@
     Reveal
 #enddefine
 
-#define add
-    Additive Distillation
-#enddefine
-
-#define sub
-    Subtractive Distillation
-#enddefine
-
-#define mult
-    Multiplicative Distillation
-#enddefine
-
-#define divide
-    Division Distillation
-#enddefine
-
-#define +y
-    Vector Reflection +Y
-#enddefine
-
-#define -y
-    Vector Reflection -Y
-#enddefine
-
-#define swap
-    Jester's Gambit
-#enddefine
-
-#define duplicate
-    Gemini Decomposition
-#enddefine
-
+-- Hexal Basic Patterns ------------------------
+-- Number Literals -----------------------------
 #define 1
     Numerical Reflection: 1
 #enddefine
@@ -110,10 +81,153 @@
     Numerical Reflection: 0
 #enddefine
 
+-- Mathematics ---------------------------------
+#define add
+    Additive Distillation
+#enddefine
+
+#define sub
+    Subtractive Distillation
+#enddefine
+
+#define mult
+    Multiplicative Distillation
+#enddefine
+
+#define divide
+    Division Distillation
+#enddefine
+
+-- Constants -----------------------------------
+#define true
+    True Reflection
+#enddefine
+
+#define false
+    False Reflection
+#enddefine
+
+#define null
+    Nullary Reflection
+#enddefine
+
+#define v0
+    Vector Reflection Zero
+#enddefine
+
+#define +x
+    Vector Reflection +X
+#enddefine
+
+#define -x
+    Vector Reflection -X
+#enddefine
+
+#define +y
+    Vector Reflection +Y
+#enddefine
+
+#define -y
+    Vector Reflection -Y
+#enddefine
+
+#define +z
+    Vector Reflection +Z
+#enddefine
+
+#define -z
+    Vector Reflection -Z
+#enddefine
+
+#define pi
+    Arc's Reflection
+#enddefine
+
+-- Hexal Maths ---------------------------------
+--  Stack Manipulation -------------------------
+#define del
+    Novice's Gambit
+#enddefine
+
+#define swap
+    Jester's Gambit
+#enddefine
+
+#define duplicate
+    Gemini Decomposition
+#enddefine
+
+-- Logical Operators ---------------------------
+-- Types ---------------------------------------
+-- Entities ------------------------------------
+#define get_entity
+    Entity Purification
+#enddefine
+
+#define zone_item
+    Zone Distillation: Item
+#enddefine
+
+-- List Manipulation ---------------------------
+#define list_get
+    Selection Distillation
+#enddefine
+
+#define list_append
+    Integration Distillation
+#enddefine
+
 #define list_dump
     Flock's Disintegration
 #enddefine
 
+-- Patterns as Iotas ---------------------------
+#define /
+    Consideration
+#enddefine
+
+#define {
+    Introspection
+#enddefine
+
+#define }
+    Retrospection
+#enddefine
+
+-- Reading and Writing -------------------------
+#define read
+    Scribe's Reflection
+#enddefine
+
+#define write
+    Scribe's Gambit
+#enddefine
+
+#define read_entity
+    Chronicler's Purification
+#enddefine
+
+#define write_entity
+    Chronicler's Gambit
+#enddefine
+
+#define read_raven
+    Muninn's Reflection
+#enddefine
+
+#define write_raven
+    Huginn's Gambit
+#enddefine
+
+-- Advanced Mathematics ------------------------
+-- Sets ----------------------------------------
+-- Meta-Evaluation -----------------------------
+#define iterate
+    Thoth's Gambit
+#enddefine
+
+-- Basic Spells --------------------------------
+-- Blockworks ----------------------------------
 #define break_block
     Break Block
 #enddefine

@@ -1,0 +1,52 @@
+#include include/shorthand.hex
+
+-- get output entity
+caster
+entity_pos
+-Z
+add
+-X
+add
+-X
+add
+get_entity
+duplicate
+read_entity
+
+-- get masterlist
+caster
+entity_pos
+-Z
+add
+-Z
+add
+get_entity
+read_entity
+
+-- count pies
+{
+    read_entity
+    pi
+    div
+    read_raven
+    add
+    write_raven
+}
+caster
+entity_pos
+1
+zone_item
+0
+write_raven
+iterate
+del
+read_raven
+
+-- get pattern
+1
+sub
+list_get
+
+-- write to output
+list_append
+write_entity
