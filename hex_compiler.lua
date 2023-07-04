@@ -1,4 +1,4 @@
--- 0.3.1
+-- 0.3.2
 local compiler = {}
 
 local included_files = {}
@@ -34,7 +34,7 @@ local function precompile(filename)
     -- remove whitespace
     local no_whitespace = {}
     for _,line in ipairs(include) do
-        if line and line ~= "" and string.sub(line, 1, 2) ~= "--" then
+        if line and line ~= "" and not line:match("^ *$") and string.sub(line, 1, 2) ~= "--" then
             while string.sub(line, 1, 1) == " " do
                 line = string.sub(line, 2, -1)
             end
