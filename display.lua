@@ -1,4 +1,4 @@
--- 0.2.0
+-- 0.2.5
 local function draw_square(monitor, x, y, width, height, text)
     for i=y,y+height-1 do
         if i == y+math.floor(height/2) then
