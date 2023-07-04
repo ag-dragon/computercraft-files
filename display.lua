@@ -65,7 +65,7 @@ local function draw(monitor, list, current)
     monitor.setBackgroundColor(colors.black)
     
     -- File Information
-    local file = fs.open(list[current], "r")
+    local file = fs.open("spells/" .. list[current], "r")
     
     monitor.setCursorPos((m_width/2)+2, 1)
     monitor.write(list[current])
