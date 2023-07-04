@@ -3,7 +3,7 @@
 -- get output entity
 caster
 entity_pos
--Z
+-z
 add
 -x
 add
