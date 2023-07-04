@@ -168,3 +168,5 @@ function compiler.compile(filename)
         channel_listen()
     end
 end
+
+return compiler
