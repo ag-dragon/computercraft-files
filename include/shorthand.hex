@@ -94,7 +94,7 @@
     Multiplicative Distillation
 #enddefine
 
-#define divide
+#define div
     Division Distillation
 #enddefine
 
