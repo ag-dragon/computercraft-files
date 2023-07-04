@@ -1,6 +1,6 @@
--- 0.1.0
+-- 0.1.1
 -- desc: old railgun testing spell
-include include/shorthand.hex
+#include include/shorthand.hex
 #include include/raycast.hex
 
 -- test

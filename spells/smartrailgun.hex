@@ -1,0 +1,59 @@
+-- 0.1.0
+-- desc: Creates wisp that then makes any arrows you shoot insta kill whatever you are looking at
+#include include/shorthand.hex
+#include include/raycast.hex
+
+-- wisp cast
+{
+    -- get entities
+    caster
+    entity_pos
+    10
+    zone_non_player
+    
+    -- check if entities
+    to_bool
+    -- if true
+    {
+        {
+            duplicate
+            entity_height
+            1
+            2
+            div
+            equals
+            -- if true
+            {
+                caster
+                entity_look
+                10
+                mult
+                Impulse
+            }
+            -- else
+            {
+            
+            }
+            conditional
+            execute
+        }
+        swap
+        iterate
+    }
+    -- else
+    {
+        
+    }
+    conditional
+    execute
+}
+-- location: above player
+caster
+entity_pos
++y
+add
+-- duration: 100
+10
+10
+mult
+Summon Cyclic Wisp

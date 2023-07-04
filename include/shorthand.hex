@@ -1,4 +1,4 @@
--- 0.1.0
+-- 0.1.1
 -- desc: Shorthand notation for patterns
 -- Basic Patterns ------------------------------
 #define caster
@@ -15,6 +15,10 @@
 
 #define entity_look
     Alidade's Purification
+#enddefine
+
+#define entity_height
+    Stadiometer's Purification
 #enddefine
 
 #define ray_block
@@ -160,6 +164,18 @@
 #enddefine
 
 -- Logical Operators ---------------------------
+#define to_bool
+    Augur's Purification
+#enddefine
+
+#define conditional
+    Augur's Exaltation
+#enddefine
+
+#define equals
+    Equality Distillation
+#enddefine
+
 -- Types ---------------------------------------
 -- Entities ------------------------------------
 #define get_entity
@@ -168,6 +184,10 @@
 
 #define zone_item
     Zone Distillation: Item
+#enddefine
+
+#define zone_non_player
+    Zone Distillation: Non-Player
 #enddefine
 
 -- List Manipulation ---------------------------
@@ -181,6 +201,10 @@
 
 #define list_create
     Vacant Reflection
+#enddefine
+
+#define list_len
+    Abacus Purification
 #enddefine
 
 #define list_dump
@@ -228,6 +252,10 @@
 -- Advanced Mathematics ------------------------
 -- Sets ----------------------------------------
 -- Meta-Evaluation -----------------------------
+#define execute
+    Hermes' Gambit
+#enddefine
+
 #define iterate
     Thoth's Gambit
 #enddefine
