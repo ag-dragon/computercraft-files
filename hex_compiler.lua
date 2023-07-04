@@ -1,3 +1,4 @@
+-- 0.3.0
 local compiler = {}
 
 local included_files = {}

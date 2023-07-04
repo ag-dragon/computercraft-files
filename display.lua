@@ -1,3 +1,4 @@
+-- 0.2.0
 local function draw_square(monitor, x, y, width, height, text)
     for i=y,y+height-1 do
         if i == y+math.floor(height/2) then
@@ -85,7 +86,7 @@ while true do
         if y >= (m_height-11) and y < (m_height-6) then
             compiler.compile("spells/" .. spells[selected])
         elseif y >= (m_height-5) and y < (m_height) then
-            updater.update()
+            updater.update(monitor)
             package.loaded.hex_compiler = nil
             compiler = require("hex_compiler")
         end

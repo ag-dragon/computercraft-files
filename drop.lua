@@ -1,3 +1,4 @@
+-- 0.1.0
 local modem = peripheral.find("modem") or error("No modem found", 0)
 modem.open(1695)
 

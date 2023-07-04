@@ -1,3 +1,4 @@
+-- 0.1.0
 local error_handler = {}
 
 function error_handler.message(monitor, contents)

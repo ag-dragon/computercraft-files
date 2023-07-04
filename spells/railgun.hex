@@ -1,4 +1,5 @@
-#include include/shorthand.hex
+-- 0.1.0
+include include/shorthand.hex
 #include include/raycast.hex
 
 -- test

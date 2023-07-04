@@ -1,3 +1,4 @@
+-- 0.1.0
 local spells = {
         -- spells
         "masterlist.hex",
