@@ -1,6 +1,7 @@
--- 0.1.3
+-- 0.1.4
 local spells = {
         -- spells
+        "smartrailgun.hex",
         "masterlist.hex",
         "railgun.hex",
         "smartbomb.hex",
