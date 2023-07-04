@@ -1,4 +1,4 @@
--- 0.2.8
+-- 0.3.0
 local function draw_square(monitor, x, y, width, height, text)
     for i=y,y+height-1 do
         if i == y+math.floor(height/2) then
@@ -80,7 +80,7 @@ local function draw(monitor, list, current)
             monitor.setCursorPos((m_width/2)+2, y)
             monitor.write(desc)
             if string.len(desc) > m_width/2 then
-                desc = string.sub(desc, m_width/2)
+                desc = string.sub(desc, (m_width/2)+1)
             else
                 desc = ""
             end
