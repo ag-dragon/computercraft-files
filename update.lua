@@ -38,6 +38,9 @@ function updater.update(monitor)
     for i,filename in ipairs(spells) do
         download_file("spells/" .. filename, monitor)
     end
+    
+    local _,y = monitor.getCursorPos()
+    monitor.setCursorPos(1, y+1)
     monitor.write("Finished updating! Click to continue...")
     
     os.pullEvent("monitor_touch")
