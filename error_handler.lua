@@ -1,6 +1,6 @@
 local error_handler = {}
 
-function message(monitor, contents)
+function error_handler.message(monitor, contents)
     monitor.setBackgroundColor(colors.red)
     monitor.setTextColor(colors.white)
     monitor.setCursorPos(1, 1)
