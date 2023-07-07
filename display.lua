@@ -1,4 +1,4 @@
--- 0.3.1
+-- 0.4.0
 local function draw_square(monitor, x, y, width, height, text)
     for i=y,y+height-1 do
         if i == y+math.floor(height/2) then
@@ -94,8 +94,21 @@ local function draw(monitor, list, current)
     end
 end
 
+local function channel_listen()
+    local e, s, ch, rch, m, d
+    repeat
+        e, s, ch, rch, m, d = os.pullEvent("modem_message")
+    until ch == 1698
+    
+    return m
+end
+
 local compiler = require("hex_compiler")
 local updater = require("update")
+
+local modem = peripheral.find("modem")
+modem.open(1698)
+
 local monitor = peripheral.find("monitor")
 local m_width, m_height = monitor.getSize()
 
@@ -120,6 +133,13 @@ while true do
             compiler = require("hex_compiler")
         end
     end
+    
+    if modem.isOpen(1697) then
+        local f = fs.open("downloads/" .. channel_listen(), "w")
+        fs.write(channel_listen())
+        f.close()
+    end
+    
     package.loaded.spells = nil
     spells = require("spells")
     draw(monitor, spells, selected)
