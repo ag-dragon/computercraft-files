@@ -1,4 +1,4 @@
--- 0.4.1
+-- 0.4.2
 
 local d = {}
 
@@ -121,27 +121,32 @@ function d.display()
     local selected = 1
     draw(monitor, spells, selected)
     while true do
-        local _, _, x, y = os.pullEvent("monitor_touch")
-        if x >= (m_width-17) and x < (m_width-10) then
-            if y >= (m_height-11) and y < (m_height-6) then
-                selected = (selected > 1) and (selected-1) or selected
-            elseif y >= (m_height-5) and y < (m_height) then
-                selected = (selected < #spells) and (selected+1) or selected
-            end
-        elseif x >= (m_width-7) and x < (m_width) then
-            if y >= (m_height-11) and y < (m_height-6) then
-                compiler.compile("spells/" .. spells[selected])
-            elseif y >= (m_height-5) and y < (m_height) then
-                updater.update(monitor)
-                package.loaded.hex_compiler = nil
-                compiler = require("hex_compiler")
-            end
-        end
+        local event_data = {os.pullEvent()};
+        local event = event_data[1]
         
-        if modem.isOpen(1697) then
-            local f = fs.open("downloads/" .. channel_listen(), "w")
-            fs.write(channel_listen())
-            f.close()
+        if event == "monitor_touch" then
+            local x, y = event[3], event[4]
+            if x >= (m_width-17) and x < (m_width-10) then
+                if y >= (m_height-11) and y < (m_height-6) then
+                    selected = (selected > 1) and (selected-1) or selected
+                elseif y >= (m_height-5) and y < (m_height) then
+                    selected = (selected < #spells) and (selected+1) or selected
+                end
+            elseif x >= (m_width-7) and x < (m_width) then
+                if y >= (m_height-11) and y < (m_height-6) then
+                    compiler.compile("spells/" .. spells[selected])
+                elseif y >= (m_height-5) and y < (m_height) then
+                    updater.update(monitor)
+                    package.loaded.hex_compiler = nil
+                    compiler = require("hex_compiler")
+                end
+            end
+        elseif event = "modem_message" then
+            if event_data[3] == 1698 then
+                local f = fs.open("downloads/" .. event_data[5][1], "w")
+                fs.write(event_data[5][2])
+                f.close()
+            end
         end
         
         package.loaded.spells = nil
