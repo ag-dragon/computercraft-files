@@ -1,0 +1,4 @@
+-- 0.1.0
+local d = require("display")
+shell.run("bg")
+d.display()

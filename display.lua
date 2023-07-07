@@ -1,4 +1,7 @@
--- 0.4.0
+-- 0.4.1
+
+local d = {}
+
 local function draw_square(monitor, x, y, width, height, text)
     for i=y,y+height-1 do
         if i == y+math.floor(height/2) then
@@ -103,44 +106,48 @@ local function channel_listen()
     return m
 end
 
-local compiler = require("hex_compiler")
-local updater = require("update")
+function d.display()
+    local compiler = require("hex_compiler")
+    local updater = require("update")
 
-local modem = peripheral.find("modem")
-modem.open(1698)
+    local modem = peripheral.find("modem")
+    modem.open(1698)
 
-local monitor = peripheral.find("monitor")
-local m_width, m_height = monitor.getSize()
+    local monitor = peripheral.find("monitor")
+    local m_width, m_height = monitor.getSize()
 
-local spells = require("spells")
+    local spells = require("spells")
 
-local selected = 1
-draw(monitor, spells, selected)
-while true do
-    local _, _, x, y = os.pullEvent("monitor_touch")
-    if x >= (m_width-17) and x < (m_width-10) then
-        if y >= (m_height-11) and y < (m_height-6) then
-            selected = (selected > 1) and (selected-1) or selected
-        elseif y >= (m_height-5) and y < (m_height) then
-            selected = (selected < #spells) and (selected+1) or selected
-        end
-    elseif x >= (m_width-7) and x < (m_width) then
-        if y >= (m_height-11) and y < (m_height-6) then
-            compiler.compile("spells/" .. spells[selected])
-        elseif y >= (m_height-5) and y < (m_height) then
-            updater.update(monitor)
-            package.loaded.hex_compiler = nil
-            compiler = require("hex_compiler")
-        end
-    end
-    
-    if modem.isOpen(1697) then
-        local f = fs.open("downloads/" .. channel_listen(), "w")
-        fs.write(channel_listen())
-        f.close()
-    end
-    
-    package.loaded.spells = nil
-    spells = require("spells")
+    local selected = 1
     draw(monitor, spells, selected)
+    while true do
+        local _, _, x, y = os.pullEvent("monitor_touch")
+        if x >= (m_width-17) and x < (m_width-10) then
+            if y >= (m_height-11) and y < (m_height-6) then
+                selected = (selected > 1) and (selected-1) or selected
+            elseif y >= (m_height-5) and y < (m_height) then
+                selected = (selected < #spells) and (selected+1) or selected
+            end
+        elseif x >= (m_width-7) and x < (m_width) then
+            if y >= (m_height-11) and y < (m_height-6) then
+                compiler.compile("spells/" .. spells[selected])
+            elseif y >= (m_height-5) and y < (m_height) then
+                updater.update(monitor)
+                package.loaded.hex_compiler = nil
+                compiler = require("hex_compiler")
+            end
+        end
+        
+        if modem.isOpen(1697) then
+            local f = fs.open("downloads/" .. channel_listen(), "w")
+            fs.write(channel_listen())
+            f.close()
+        end
+        
+        package.loaded.spells = nil
+        spells = require("spells")
+        draw(monitor, spells, selected)
+    end
 end
+
+return d

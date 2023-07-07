@@ -1,4 +1,4 @@
--- 0.2.7
+-- 0.2.8
 local updater = {}
 
 local function download_file(filename, monitor)
@@ -25,6 +25,7 @@ function updater.update(monitor)
     monitor.setCursorPos(1, 1)
     monitor.write("Updating...")
     
+    download_file("startup", monitor)
     download_file("display.lua", monitor)
     download_file("error_handler.lua", monitor)
     download_file("hex_compiler.lua", monitor)
@@ -44,11 +45,6 @@ function updater.update(monitor)
     for i,filename in ipairs(spells) do
         download_file("spells/" .. filename, monitor)
     end
-    
-    if fs.exists("startup") then
-        shell.run("delete", "startup")
-    end
-    shell.run("copy", "display.lua", "startup")
     
     local _,y = monitor.getCursorPos()
     monitor.setCursorPos(1, y+1)
