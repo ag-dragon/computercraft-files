@@ -1,4 +1,4 @@
--- 0.4.5
+-- 0.4.6
 
 local d = {}
 
@@ -111,6 +111,15 @@ local function channel_listen()
     return m
 end
 
+local function get_spells()
+    package.loaded.spells = nil
+    local spells = require("spells")
+    local downloads = fs.list("downloads/")
+    for i=1,#downloads do
+        table.insert(spells, downloads[i])
+    end
+end
+
 function d.display()
     local compiler = require("hex_compiler")
     local updater = require("update")
@@ -121,10 +130,10 @@ function d.display()
     local monitor = peripheral.find("monitor")
     local m_width, m_height = monitor.getSize()
 
-    local spells = require("spells")
+    local spell_list = get_spells()
 
     local selected = 1
-    draw(monitor, spells, selected)
+    draw(monitor, spell_list, selected)
     while true do
         local event_data = {os.pullEvent()};
         local event = event_data[1]
@@ -135,11 +144,13 @@ function d.display()
                 if y >= (m_height-11) and y < (m_height-6) then
                     selected = (selected > 1) and (selected-1) or selected
                 elseif y >= (m_height-5) and y < (m_height) then
-                    selected = (selected < #spells) and (selected+1) or selected
+                    selected = (selected < #spell_list) and (selected+1) or selected
                 end
             elseif x >= (m_width-7) and x < (m_width) then
                 if y >= (m_height-11) and y < (m_height-6) then
-                    compiler.compile("spells/" .. spells[selected])
+                    
+                
+                    compiler.compile("spells/" .. spell_list[selected])
                 elseif y >= (m_height-5) and y < (m_height) then
                     updater.update(monitor)
                     package.loaded.hex_compiler = nil
@@ -154,9 +165,8 @@ function d.display()
             end
         end
         
-        package.loaded.spells = nil
-        spells = require("spells")
-        draw(monitor, spells, selected)
+        spell_list = get_spells()
+        draw(monitor, spell_list, selected)
     end
 end
 
