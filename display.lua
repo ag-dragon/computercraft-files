@@ -1,4 +1,4 @@
--- 0.4.7
+-- 0.4.8
 
 local d = {}
 
@@ -150,9 +150,11 @@ function d.display()
                 end
             elseif x >= (m_width-7) and x < (m_width) then
                 if y >= (m_height-11) and y < (m_height-6) then
-                    
-                
-                    compiler.compile("spells/" .. spell_list[selected])
+                    if fs.exists("spells/" .. spell_list[selected]) then
+                        compiler.compile("spells/" .. spell_list[selected])
+                    elseif fs.exists("downloads/" .. spell_list[selected]) then
+                        compiler.compile("downloads/" .. spell_list[selected])
+                    end
                 elseif y >= (m_height-5) and y < (m_height) then
                     updater.update(monitor)
                     package.loaded.hex_compiler = nil
