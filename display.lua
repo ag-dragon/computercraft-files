@@ -1,4 +1,4 @@
--- 0.4.2
+-- 0.4.3
 
 local d = {}
 
@@ -125,7 +125,7 @@ function d.display()
         local event = event_data[1]
         
         if event == "monitor_touch" then
-            local x, y = event[3], event[4]
+            local x, y = event_data[3], event_data[4]
             if x >= (m_width-17) and x < (m_width-10) then
                 if y >= (m_height-11) and y < (m_height-6) then
                     selected = (selected > 1) and (selected-1) or selected
@@ -141,7 +141,7 @@ function d.display()
                     compiler = require("hex_compiler")
                 end
             end
-        elseif event = "modem_message" then
+        elseif event == "modem_message" then
             if event_data[3] == 1698 then
                 local f = fs.open("downloads/" .. event_data[5][1], "w")
                 fs.write(event_data[5][2])
