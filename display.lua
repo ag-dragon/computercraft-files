@@ -1,4 +1,4 @@
--- 0.4.6
+-- 0.4.7
 
 local d = {}
 
@@ -70,9 +70,9 @@ local function draw(monitor, list, current)
     -- File Information
     local file = nil
     if fs.exists("spells/" .. list[current]) then
-        local file = fs.open("spells/" .. list[current], "r")
+        file = fs.open("spells/" .. list[current], "r")
     elseif fs.exists("downloads/" .. list[current]) then
-        local file = fs.open("downloads/" .. list[current], "r")
+        file = fs.open("downloads/" .. list[current], "r")
     end
     
     if file then
@@ -118,6 +118,8 @@ local function get_spells()
     for i=1,#downloads do
         table.insert(spells, downloads[i])
     end
+    
+    return spells
 end
 
 function d.display()

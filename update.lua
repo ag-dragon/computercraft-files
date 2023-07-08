@@ -1,4 +1,4 @@
--- 0.2.8
+-- 0.2.9
 local updater = {}
 
 local function download_file(filename, monitor)
@@ -51,6 +51,7 @@ function updater.update(monitor)
     monitor.write("Finished updating! Click to continue...")
     
     os.pullEvent("monitor_touch")
+    os.reboot()
 end
 
 return updater
