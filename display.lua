@@ -1,4 +1,4 @@
--- 0.4.3
+-- 0.4.4
 
 local d = {}
 
@@ -144,7 +144,7 @@ function d.display()
         elseif event == "modem_message" then
             if event_data[3] == 1698 then
                 local f = fs.open("downloads/" .. event_data[5][1], "w")
-                fs.write(event_data[5][2])
+                f.write(event_data[5][2])
                 f.close()
             end
         end
