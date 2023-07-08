@@ -1,4 +1,4 @@
--- 0.4.4
+-- 0.4.5
 
 local d = {}
 
@@ -68,9 +68,14 @@ local function draw(monitor, list, current)
     monitor.setBackgroundColor(colors.black)
     
     -- File Information
+    local file = nil
     if fs.exists("spells/" .. list[current]) then
         local file = fs.open("spells/" .. list[current], "r")
-        
+    elseif fs.exists("downloads/" .. list[current]) then
+        local file = fs.open("downloads/" .. list[current], "r")
+    end
+    
+    if file then
         monitor.setCursorPos((m_width/2)+2, 1)
         monitor.write(list[current])
         monitor.setCursorPos((m_width/2)+2, 2)
