@@ -1,4 +1,4 @@
--- 0.1.2
+-- 0.1.3
 -- desc: Creates wisp that then makes any arrows you shoot insta kill whatever you are looking at
 #include include/shorthand.hex
 #include include/raycast.hex
@@ -12,6 +12,7 @@
     zone_non_player
     
     -- check if entities
+    duplicate
     to_bool
     -- if true
     {
